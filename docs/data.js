@@ -6,9 +6,9 @@ const words = {
 		["Luft-", "Zug", "Fahrt", "Druck", "Qualität"]
     ],
     "2023-11-22": [
-		["numbers", "0", "1", "2", "3"],
-		["letters", "a", "b", "c", "d"],
-		["LETTERS", "A", "B", "C", "D"],
-		["characters", "+", "-", "*", "/"]
+		["Schmuckgegenstände", "Halskette", "Armband", "Haarreif", "Brosche"],
+		["Elemente einer Waffe", "Abzug", "Magazin", "Sicherung", "Kolben"],
+		["Gegenstände die meist in Paaren auftreten", "Schuh", "Ohrring", "Brillenglas", "Lautsprecher"],
+		["Hand-", "Tasche", "Lauf", "Werk", "Arbeit"]
     ]
 }
