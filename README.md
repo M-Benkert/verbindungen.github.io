@@ -1,1 +1,3 @@
-# verbindungen.github.io
+# Verbindungen
+
+Ein Adventskalender im Stil von Connections.
