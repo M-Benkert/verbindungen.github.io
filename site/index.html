@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <title>Adventskalender</title>
+	
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+    <link rel="stylesheet" href="style.css">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <div class="pz-game-title-bar pz-game-row">
+        <h1><b>Adventskalender</b> <span id="current-date"></span></h1>
+    </div>
+
+    <div class="pz-game-wrapper">
+        <div id="message" class="hide"><span>Einen daneben...</span></div>
+
+        <div id="congrats-modal" class="modal obscure-behind hide" onclick="hideResults()">
+            <div class="modal-content">
+                <div id="close-congrats" class="close-x">
+                    <button onclick="hideResults()">x</button>
+                </div>
+                <div class="congrats-contents">
+                    <div class="puzzle-results">
+                        <h2 id="congrats-title" class="modal-title">Spiel läuft noch!</h2>
+                        <div id="emoji-recap"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Grid of buttons -->
+        <div class="button-grid" id="board">
+            <div id="row-0">
+                <div class="word_button item-row-0 item-col-0">Button 1</div>
+                <div class="word_button item-row-0 item-col-1">Button 2</div>
+                <div class="word_button item-row-0 item-col-2">Button 3</div>
+                <div class="word_button item-row-0 item-col-3">Button 4</div>
+                <div class="answer-banner row-0">
+                    <p><span class="category">Category</span><br><span class="words">A, B, C, D</span></p>
+                </div>
+            </div>
+            <div id="row-1">
+                <div class="word_button item-row-1 item-col-0">Button 5</div>
+                <div class="word_button item-row-1 item-col-1">Button 6</div>
+                <div class="word_button item-row-1 item-col-2">Button 7</div>
+                <div class="word_button item-row-1 item-col-3">Button 8</div>
+                <div class="answer-banner row-0">
+                    <p><span class="category">Category</span><br><span class="words">A, B, C, D</span></p>
+                </div>
+            </div>
+            <div id="row-2">
+                <div class="word_button item-row-2 item-col-0">Button 9</div>
+                <div class="word_button item-row-2 item-col-1">Button 10</div>
+                <div class="word_button item-row-2 item-col-2">Button 11</div>
+                <div class="word_button item-row-2 item-col-3">Button 12</div>
+                <div class="answer-banner row-0">
+                    <p><span class="category">Category</span><br><span class="words">A, B, C, D</span></p>
+                </div>
+            </div>
+            <div id="row-3">
+                <div class="word_button item-row-3 item-col-0">Button 13</div>
+                <div class="word_button item-row-3 item-col-1">Button 14</div>
+                <div class="word_button item-row-3 item-col-2">Button 15</div>
+                <div class="word_button item-row-3 item-col-3">Button 16</div>
+                <div class="answer-banner row-0">
+                    <p><span class="category">Category</span><br><span class="words">A, B, C, D</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div id="attempts-remaining-text">
+            <span>Verbleibende Fehlversuche:</span>
+            <span id="attempts-remaining-bubbles">
+                <span id="bubble-0" class="bubble"></span>
+                <span id="bubble-1" class="bubble"></span>
+                <span id="bubble-2" class="bubble"></span>
+                <span id="bubble-3" class="bubble"></span>
+            </span>
+        </div>
+
+        <div id="tool-buttons">
+            <button  id="shuffle-button" onclick="shuffleWords()">Mischen</button>
+            <button  id="deselect-all-button" onclick="unselectAll()">Alle abwählen</button>
+            <button  id="submit-button" onclick="submitGuess()">Tipp abgeben</button>
+        </div>
+
+        <div id="results-buttons">
+            <button  id="results-button" onclick="showResults()">Ergebnisse Anzeigen</button>
+        </div>
+    </div>
+    <div style="margin-top: 10vw">
+        <p>Diese Website ist angelehnt an das Spiel Connections der New York Times (siehe <a href="https://www.nytimes.com/games/connections">hier</a>)
+            und wurde ausschließlich zu persönlichen Zwecken erstellt.</p>
+        <p>Alle Urheberrechte und Markenrechte für den Inhalt, das Design und andere Elemente der Originalwebsite liegen bei ihren jeweiligen Eigentümern.</p>
+    </div>
+
+</body>
+</html>

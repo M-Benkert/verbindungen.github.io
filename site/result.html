@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventskalender Übersicht</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .box {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            margin: 5px;
+            border: 1px solid #000;
+            text-align: center;
+            line-height: 40px;
+            font-size: 14px;
+        }
+
+        .succeed {
+            background-color: #8BC34A; /* Green */
+        }
+
+        .failed {
+            background-color: #F44336; /* Red */
+        }
+    </style>
+</head>
+<body>
+    <h1>Adventskalender Übersicht</h1>
+
+    <div id="main"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const container = document.getElementById("main");
+
+            for (let i = 1; i <= 24; i++) {
+                const box = document.createElement("div");
+                box.className = "box";
+
+                const formattedNumber = i.toString().padStart(2, '0');
+                const localStorageKey = `attempts_remaining_2023-12-${formattedNumber}`;
+                const localStorageValue = localStorage.getItem(localStorageKey);
+
+                const firstNumber = i;
+                const secondNumber = localStorageValue !== null ? JSON.parse(localStorageValue) : "x";
+
+                box.innerHTML = `${firstNumber}: ${secondNumber}`;
+
+                if (localStorageValue !== null) {
+                        if (parseInt(localStorageValue, 10) === 0) {
+                        box.classList.add("failed");
+                    } else {
+                        box.classList.add("succeed");
+                    }
+                }
+
+                container.appendChild(box);
+            }
+        });
+    </script>
+</body>
+</html>
