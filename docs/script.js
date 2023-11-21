@@ -55,6 +55,30 @@ function getCurrentDate() {
 
 const CURRENT_DATE = getCurrentDate();
 
+function addClassTemporarily(element, token, ms = 500) {
+        element.classList.add(token);
+        setTimeout(() => {
+            element.classList.remove(token);
+        }, ms);
+    }
+
+function forEachWithDelay(array, func, callback, ms=500) {
+    let index = 0;
+
+    function executeNext() {
+        if (index < array.length) {
+            func(array[index]);
+            index++;
+            setTimeout(executeNext, ms);
+        } else if (callback) {
+            callback();
+        }
+    }
+
+    // Start the execution
+    executeNext();
+}
+
 // word objects ***************************************************************
 class Category {
 	static current = 0;
@@ -62,6 +86,7 @@ class Category {
 	constructor(category) {
 		this.category = category;
 		this.group = Category.current;
+		this.guessed = false;
 		this.wordObjects = [];
 		Category.current++;
 	}
@@ -70,6 +95,15 @@ class Category {
 		if (this.wordObjects.length >= 4)
 			console.error("only four word per category")
 		this.wordObjects.push(wordObject)
+	}
+
+	setGuessed(fromWordObject = false) {
+		this.guessed = true;
+		if (!fromWordObject) {
+			this.wordObjects.forEach(wordObject => {
+				wordObject.setGuessed(false);
+			});
+		}
 	}
 	
 	getCategory() {
@@ -82,6 +116,10 @@ class Category {
 
 	getWordObjects() {
 		return this.wordObjects;
+	}
+
+	isGuessed() {
+		return this.guessed;
 	}
 }
 
@@ -110,8 +148,12 @@ class Word {
 		this.wordButtonObject = wordButtonObject;
 	}
 	
-	setGuessed() {
+	setGuessed(fromCategoryObject = false) {
 		this.guessed = true;
+
+		if (!fromCategoryObject) {
+			this.categoryObject.setGuessed(true);
+		}
 	}
 	
 	getWord() {
@@ -130,6 +172,10 @@ class Word {
 		return this.categoryObject.getGroup();
 	}
 
+	getWordButtonNumber() {
+		return this.wordButtonObject.getNumber();
+	}
+
 	getWordButtonObject() {
 		return this.wordButtonObject;
 	}
@@ -144,10 +190,14 @@ class Word {
 }
 
 class WordButton {
+	static current = 0;
+
     constructor(wordObject, buttonElement) {
         this.word = wordObject;
 		this.word.updateWordButtonObject(this);
+		this.number = WordButton.current;
 		this.buttonElement = buttonElement;
+		WordButton.current++;
     }
 
     selectWord() {
@@ -160,6 +210,10 @@ class WordButton {
 		this.word.updateWordButtonObject(this);
 		this.refreshButton();
 	}
+
+	getNumber() {
+		return this.number;
+	}
 	
 	getWordObject() {
 		return this.word;
@@ -171,6 +225,14 @@ class WordButton {
 	
 	wordIsGuessed() {
 		return this.word.isGuessed();
+	}
+
+	shakeButtonVertically() {
+		addClassTemporarily(this.buttonElement, "vertical-shake-animation", 500)
+	}
+
+	shakeButtonTilty() {
+		addClassTemporarily(this.buttonElement, "tilt-shake-animation", 500)
 	}
 	
 	refreshButton() {
@@ -188,10 +250,7 @@ function fitFontSizeToDiv(elem) {
 
 	let fontSize = parseInt(window.getComputedStyle(elem).getPropertyValue("font-size").slice(0, -2));
 
-	console.log(elem.scrollWidth, elem.clientWidth, fontSize);
-
 	while (elem.scrollWidth > elem.clientWidth && fontSize > 0) {
-		console.log(elem.scrollWidth, elem.clientWidth, fontSize);
 		fontSize--;
 		elem.style.fontSize = fontSize + "px";
 	}
@@ -420,25 +479,22 @@ function hideResults() {
 	}
 }
 
-function submitGuess() {
+function submitGuess(interactive = true) {
 	if (selectedWordObjects.length < 4) {
 		return ;
 	}
 
 	saveGuess(selectedWordObjects.map(wordObject => wordObject.getGroup()));
 
-	const count = countCorrectGuesses(selectedWordObjects.map(wordObject => wordObject.getGroup()));
-	
-	if (count === 4) {
-		persistCorrectGuess();
+	if (interactive) {
+		forEachWithDelay(selectedWordObjects.sort((a, b) => {
+			return a.getWordButtonNumber() - b.getWordButtonNumber();
+		}), wordObject => {
+			wordObject.getWordButtonObject().shakeButtonVertically();
+		}, () => { checkGuess(interactive); }, 200)
 	} else {
-		handleWrongGuess();
-		if (count === 3) {
-			displayMessage(5);
-		}
+		checkGuess(interactive);
 	}
-
-	checkGameEnd();
 }
 
 // main game functions ********************************************************
@@ -462,6 +518,21 @@ function displayGuess(groups) {
 	document.getElementById("emoji-recap").appendChild(row);
 }
 
+function checkGuess(interactive = false) {
+	const count = countCorrectGuesses(selectedWordObjects.map(wordObject => wordObject.getGroup()));
+
+	if (count === 4) {
+		persistCorrectGuess();
+	} else {
+		handleWrongGuess(interactive);
+		if (count === 3) {
+			displayMessage(5);
+		}
+	}
+
+	checkGameEnd(interactive);
+}
+
 function countCorrectGuesses(groups) {
 	let counts = [];
 	groups.slice(0, -1).forEach((group, index) => {
@@ -479,10 +550,16 @@ function countCorrectGuesses(groups) {
 	return Math.max(...counts);
 }
 
-function handleWrongGuess() {
+function handleWrongGuess(interactive = false) {
 	attemptsRemaining--;
 	attemptBubbleObjects[attemptsRemaining].setUsedUp();
 	storeAttemptsRemaining();
+
+	if (interactive) {
+		selectedWordObjects.forEach(wordObject => {
+			wordObject.getWordButtonObject().shakeButtonTilty();
+		});
+	}
 }
 
 function persistCorrectGuess() {
@@ -507,40 +584,49 @@ function persistCorrectGuess() {
 	unselectAll();
 }
 
-function checkGameEnd() {
+function checkGameEnd(interactive = false) {
 	if (attemptsRemaining <= 0) {
-		localStorage.setItem(STORAGE_KEY_ATTEMPTS_REMAINING + "_" + CURRENT_DATE, "0");
-		document.getElementById("congrats-title").textContent = "Beim nächsten Mal!";
-		handleNoMoreAttempts();
+		handleNoMoreAttempts(interactive);
 	} else if (guessedCategoryObjects.length === 4) {
+		setTimeout(() => {
+			showResults();
+    	}, 500);
+
+	}
+
+	if (attemptsRemaining <= 0 || guessedCategoryObjects.length === 4) {
 		localStorage.setItem(STORAGE_KEY_ATTEMPTS_REMAINING + "_" + CURRENT_DATE, attemptsRemaining);
 		const message = [
+			"Beim nächsten Mal!",
 			"Puh!",
 			"Solide!",
 			"Großartig!",
 			"Perfekt!",
 		]
-		document.getElementById("congrats-title").textContent = message[attemptsRemaining - 1];
-		showResults();
+		document.getElementById("congrats-title").textContent = message[attemptsRemaining];
 	}
 }
 
-function handleNoMoreAttempts() {
-	for (let index = 0; index < categoryObjects.length; index++) {
-		const categoryObject = categoryObjects[index];
-		if (categoryObject.getWordObjects()[0].isGuessed()) {
-			continue ;
-		}
+function handleNoMoreAttempts(interactive = false) {
+	const openCategories = categoryObjects.filter(categoryObjects => !categoryObjects.isGuessed());
+
+	console.log(interactive)
+	console.log(openCategories)
+
+	if (interactive) {
 		setTimeout(() => {
+			forEachWithDelay(openCategories, categoryObject => {
+				persistCategory(categoryObject);
+			}, showResults, 1000);
+		}, 500);
+	} else {
+		openCategories.forEach(categoryObject => {
 			persistCategory(categoryObject);
-			handleNoMoreAttempts();
-    	}, 1000);
+		});
 
-		break;
-	}
-
-	if (guessedCategoryObjects.length === 4) {
-		showResults();
+		setTimeout(() => {
+			showResults();
+    	}, 500);
 	}
 }
 

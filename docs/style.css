@@ -397,3 +397,40 @@ button {
     border-radius: 4px;
     margin: 2px 0;
 }
+
+/* animations ****************************************************************/
+.horizontal-shake-animation {
+    animation: horizontal-shaking 0.5s ease-in-out;
+}
+
+.vertical-shake-animation {
+    animation: vertical-shaking 0.5s ease-in-out;
+}
+
+.tilt-shake-animation {
+    animation: tilt-shaking 0.5s ease-in-out;
+}
+
+@keyframes horizontal-shaking {
+    0% { transform: translateX(0) }
+    25% { transform: translateX(10px) }
+    50% { transform: translateX(-5px) }
+    75% { transform: translateX(10px) }
+    100% { transform: translateX(0) }
+}
+
+@keyframes vertical-shaking {
+    0% { transform: translateY(0) }
+    25% { transform: translateY(5px) }
+    50% { transform: translateY(-5px) }
+    75% { transform: translateY(5px) }
+    100% { transform: translateY(0) }
+}
+
+@keyframes tilt-shaking {
+    0% { transform: rotate(0deg) }
+    25% { transform: rotate(5deg) }
+    50% { transform: rotate(0deg) }
+    75% { transform: rotate(-5deg) }
+    100% { transform: rotate(0deg) }
+}
