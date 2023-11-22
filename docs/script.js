@@ -522,7 +522,13 @@ function checkGuess(interactive = false) {
 	const count = countCorrectGuesses(selectedWordObjects.map(wordObject => wordObject.getGroup()));
 
 	if (count === 4) {
-		persistCorrectGuess();
+		if (interactive) {
+			setTimeout(() => {
+				persistCorrectGuess();
+			}, 500);
+		} else {
+			persistCorrectGuess();
+		}
 	} else {
 		handleWrongGuess(interactive);
 		if (count === 3) {
