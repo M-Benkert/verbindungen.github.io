@@ -525,18 +525,19 @@ function checkGuess(interactive = false) {
 		if (interactive) {
 			setTimeout(() => {
 				persistCorrectGuess();
+				checkGameEnd(interactive);
 			}, 500);
 		} else {
 			persistCorrectGuess();
+			checkGameEnd(interactive);
 		}
 	} else {
 		handleWrongGuess(interactive);
 		if (count === 3) {
 			displayMessage(5);
 		}
+		checkGameEnd(interactive);
 	}
-
-	checkGameEnd(interactive);
 }
 
 function countCorrectGuesses(groups) {
