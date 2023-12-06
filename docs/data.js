@@ -66,19 +66,19 @@ const words = {
 		["Filme mit acht oder mehr Kinofilmen", "Harry Potter", "Fast & Furious", "Star Trek", "James Bond"]
     ],
     "2023-12-12": [
-		["", "", "", "", ""],
+		["Kollaps", "Schwächeanfall", "Zusammenbruch", "Hitzschlag", "Synkope"],
 		["Währung", "Euro", "Dollar", "Yen", "Real"],
 		["Altertümliche Einheiten", "Dutzend", "Schock", "Lot", "Pfund"],
 		["Bekannte Felsformationen", "12 Apostel", "Bastei", "Teufelsmauer", "Donaudurchbruch"]
     ],
     "2023-12-13": [
-		["Unglücksboten", "13", "schwarze Katze", "Scherben", "Salz"],
-		["", "", "", "", ""],
-		["", "", "", "", ""],
-		["", "", "", "", ""]
+		["Unglücksbringer", "13", "schwarze Katze", "zerbrochener Spiegel", "verschüttetes Salz"],
+		["Riskante Situation", "heikle Lage", "dünnes Eis", "offenes Messer", "Spiel mit dem Feuer"],
+		["Erkennungsmerkmal der Hauptperson aus Märchen", "gläserner Schuh", "roter Umhang", "goldene Kugel", "langes Haar"],
+		["Pleonasmen", "alter Greis", "lästiges Ärgernis", "schwarzer Kohle", "natürlicher Instinkt"]
     ],
     "2023-12-14": [
-		["", "Valentinstag", "", "", ""],
+		["Vorzufinden am Valentinstag", "Karte", "Schokolade", "Herz", "Rose"],
 		["", "", "", "", ""],
 		["", "", "", "", ""],
 		["", "", "", "", ""]
@@ -90,20 +90,20 @@ const words = {
 		["", "", "", "", ""]
     ],
     "2023-12-16": [
-		["", "Sweet Sixteen", "", "", ""],
-		["", "", "", "", ""],
-		["", "", "", "", ""],
+		["Merkmal, an dem man eine Person oder einen Gegenstand erkennt", "Kennzeichen", "Merkmal", "Eigenschaft", "Besonderheit"],
+		["Auszeichnung", "Pokal", "Medaille", "Trophäe", "Plakette"],
+		["Gegenstände, die man beim Autofahren mitführen muss", "Führerschein", "Fahrzeugpapiere", "Warndreieck", "Verbandskasten"],
 		["", "", "", "", ""]
     ],
     "2023-12-17": [
-		["", "", "", "", ""],
-		["", "", "", "", ""],
-		["", "", "", "", ""],
-		["", "", "", "", ""]
+		["Leidenschaft", "Feuer", "Inbrunst", "Hingabe", "Affekt"],
+		["Bodenbestandteile", "Erde", "Sand", "Ton", "Hummus"],
+		["Möglichkeit, sich frei zu bewegen/entfalten", "Luft", "Platz", "Spielraum", "Freiheit"],
+		["Energiegewinnung: -Kraft", "Wasser", "Wind", "Solar", "Kern"]
     ],
     "2023-12-18": [
-		["", "Volljährig", "Erwachsen", "", ""],
-		["", "", "", "", ""],
+		["Adjektive der juristischen Fachsprache", "Volljährig", "Erwachsen", "rechtsfähig", "handlungsfähig", "geschäftsfähig", "deliktfähig", ""],
+		["Bedeutungen des Wortes Ausgehen", "Erlöschen", "Schwinden", "Enden", "Voraussetzen"],
 		["", "", "", "", ""],
 		["", "", "", "", ""]
     ],
@@ -114,7 +114,7 @@ const words = {
 		["", "", "", "", ""]
     ],
     "2023-12-20": [
-		["", "", "", "", ""],
+		["", "Dart", "", "", ""],
 		["", "", "", "", ""],
 		["", "", "", "", ""],
 		["", "", "", "", ""]
@@ -144,11 +144,13 @@ const words = {
 		["", "", "", "", ""]
     ],
     "_": [
-		["Bedeutungen des Wortes Ausgehen", "Erlöschen", "Schwinden", "Enden", "Voraussetzen"],
-		["Bodenbestandteile", "Erde", "Sand", "Ton", "Hummus"],
-		["Energiegewinnung: -Kraft", "Wasser", "Wind", "Solar", "Kern"],
+		["Paradoxe deutsche Wörter"],
+		["(Soziale) Bedürfnisse"],
+		["Flasche", "Luftnummer"],
+		["Hinunterschlucken", "Hinnehmen"],
+		["Reaktionen in einer unangenehmen Situation", "Hinnehmen"],
+		["Ergebnisse der Grundrechenarten", "Hinnehmen"],
 		["Weißtöne", "Creme", "Eierschale", "Elfenbein", "Schnee", "Alt", "Rein", "Perl", "Champagner", "Nude"],  // https://www.cleverprinting.de/farbwelten-weisstoene/
-		["Auszeichnung", "Pokal", "Medaille", "Trophäe", "Plakette"],
 		["Tarot-Karten"], // https://de.wikipedia.org/wiki/Tarot
 		["Homophone Substantiv und Verb", "Ahnen", "Eichen", "Kapern", "Rasen"],
 		["Produkte, die man bei ihrem Markennamen nennt", "Zewa", "Tempo", "Plexiglas", "Uhu", "Pritt", "Labello", "Tipp-Ex", "Tesa", "Edding", "Aspirin", "Ibuprofen", "Pampers", "Tupperware", "Fön", "Hüttenkäse"],
