@@ -49,7 +49,7 @@ const words = {
     ],
     "2023-12-09": [
 		["Alternatives Fluggerät", "Fesselballon", "Luftschiff", "Zeppelin", "Segelflugzeug"],
-		["Robert", "Finanzminister", "Vater der Atombombe", "3. Detektiv", "RKI-Namensgeber"],
+		["Robert", "Wirtschaftsminister", "Vater der Atombombe", "3. Detektiv", "RKI-Namensgeber"],
 		["Aus dem Song 99 Luftballons", "Luftballon", "Düsenflieger", "Kriegsminister", "Krieg"],
 		["Personifikationen von abstrakten Konzepten", "Mutter Natur", "Sensenmann", "Fortuna", "Justitia"]
     ],
