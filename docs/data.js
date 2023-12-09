@@ -56,8 +56,8 @@ const words = {
     "2023-12-10": [
 		["Kartenspielwert", "10", "Dame", "König", "Ass"],
 		["Person, die in einer bedrängten Situation zeitweise einspringt", "Springer", "Aushilfe", "Hilfskraft", "Vertretung"],
-		["Teppichart", "Brücke", "Flokati", "Läufer", "Perser"],
-		["S-", "Turm", "Amt", "Inn", "Pinne"]
+		["Ort, an dem man eingesperrt ist", "Turm", "Verlies", "Anstalt", "Zelle"],
+		["Teppichart", "Brücke", "Flokati", "Läufer", "Perser"]
     ],
     "2023-12-11": [
 		["Filme mit Zahl im Titel", "Ocean's_Eleven", "27_Dresses", "Fifty_Shades of Grey", "In 80 Tagen um_die_Welt"],
