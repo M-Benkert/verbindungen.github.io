@@ -47,7 +47,7 @@ const words = {
 		["Filmformate", "Super 8", "35 mm", "VistaVision", "IMAX"],
 		["Werte in den SI Basiseinheiten", "20 s", "50 m", "80 kg", "273.15 K"]
     ],
-    "2023-12-9": [
+    "2023-12-09": [
 		["Alternatives Fluggerät", "Fesselballon", "Luftschiff", "Zeppelin", "Segelflugzeug"],
 		["Robert", "Finanzminister", "Vater der Atombombe", "3. Detektiv", "RKI-Namensgeber"],
 		["Aus dem Song 99 Luftballons", "Luftballon", "Düsenflieger", "Kriegsminister", "Krieg"],
@@ -90,10 +90,10 @@ const words = {
 		["", "", "", "", ""]
     ],
     "2023-12-16": [
-		["Merkmal, an dem man eine Person oder einen Gegenstand erkennt", "Kennzeichen", "Merkmal", "Eigenschaft", "Besonderheit"],
-		["Auszeichnung", "Pokal", "Medaille", "Trophäe", "Plakette"],
-		["Gegenstände, die man beim Autofahren mitführen muss", "Führerschein", "Fahrzeugpapiere", "Warndreieck", "Verbandskasten"],
-		["", "", "", "", ""]
+		["Etwas, an dem man eine Person oder einen Gegenstand erkennt", "Kennzeichen", "Merkmal", "Eigenschaft", "Besonderheit"],
+		["Gegenstand, den man beim Autofahren mitführen muss", "Führerschein", "Fahrzeugpapiere", "Warndreieck", "Verbandskasten"],
+		["Gegenstand zur Steuerung", "Lenkrad", "Fernbedienung", "Maus", "Touchpad"],
+		["Nadel-", "Drucker", "Kissen", "Baum", "Spitze"]
     ],
     "2023-12-17": [
 		["Leidenschaft", "Feuer", "Inbrunst", "Hingabe", "Affekt"],
