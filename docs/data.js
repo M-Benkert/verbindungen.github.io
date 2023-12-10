@@ -78,16 +78,16 @@ const words = {
 		["Pleonasmen", "alter Greis", "lästiges Ärgernis", "schwarzer Kohle", "natürlicher Instinkt"]
     ],
     "2023-12-14": [
-		["Vorzufinden am Valentinstag", "Karte", "Schokolade", "Herz", "Rose"],
-		["", "", "", "", ""],
-		["", "", "", "", ""],
-		["", "", "", "", ""]
+		["Schenken am Valentinstag", "Karte", "Praline", "Herz", "Rose"],
+		["Brautkleid Töne", "Creme", "Elfenbein", "Champagner", "Rosè"],
+		["Bedeutung des Wortes Geist", "Verstand", "Scharfsinn", "Gesinnung", "Gespenst"],
+		["Zutaten für eine klassische Erdbeere Bowle", "Erdbeere", "Sekt", "Weißwein", "Minze"]
     ],
     "2023-12-15": [
-		["", "Mitte (des Monats)", "", "", ""],
-		["", "", "", "", ""],
-		["", "", "", "", ""],
-		["", "", "", "", ""]
+		["Umgangssprachlich für Versager", "Niete", "Pfeife", "Flache", "Null"],
+		["Zeitlich begrenzer Abschnitt eines Wettkampfs", "Halbzeit", "Durchgang", "Lauf", "Satz"],
+		["Produkte, die man bei ihrem Markennamen nennt", "Tempo", "Labello", "Edding", "Fön"],
+		["Gebirgs-", "Pass", "Kamm", "Kette", "Zug"]
     ],
     "2023-12-16": [
 		["Etwas, an dem man eine Person oder einen Gegenstand erkennt", "Kennzeichen", "Merkmal", "Eigenschaft", "Besonderheit"],
@@ -146,14 +146,13 @@ const words = {
     "_": [
 		["Paradoxe deutsche Wörter"],
 		["(Soziale) Bedürfnisse"],
-		["Flasche", "Luftnummer"],
+		["Teilen", "halbieren", "spalten", "zerlegen", "aufschlüsseln"],
 		["Hinunterschlucken", "Hinnehmen"],
 		["Reaktionen in einer unangenehmen Situation", "Hinnehmen"],
 		["Ergebnisse der Grundrechenarten", "Hinnehmen"],
-		["Weißtöne", "Creme", "Eierschale", "Elfenbein", "Schnee", "Alt", "Rein", "Perl", "Champagner", "Nude"],  // https://www.cleverprinting.de/farbwelten-weisstoene/
 		["Tarot-Karten"], // https://de.wikipedia.org/wiki/Tarot
-		["Homophone Substantiv und Verb", "Ahnen", "Eichen", "Kapern", "Rasen"],
 		["Produkte, die man bei ihrem Markennamen nennt", "Zewa", "Tempo", "Plexiglas", "Uhu", "Pritt", "Labello", "Tipp-Ex", "Tesa", "Edding", "Aspirin", "Ibuprofen", "Pampers", "Tupperware", "Fön", "Hüttenkäse"],
+		["Homophone Substantiv und Verb", "Ahnen", "Eichen", "Kapern", "Rasen"],
 		["Palindrome", "Bob", "Ebbe", "Ehe", "Elle", "Exe", "Gag", "Gig", "Hannah", "Kajak", "Kasak", "Level", "Madam", "neben", "nennen", "nun", "Otto", "Pop", "Radar", "tut", "Uhu"],
 		["Wörter, die häufig falsch geschrieben werden (in falsch)", "brilliant", "detalliert", "einfaltslos", "Mobilar", "Orginal", "Reperatur", "seperat", "verpöhnt"], // https://sternenvogelreisen.de/haeufig-falsch-geschriebene-woerter-richtig/
 		["Sonntags-", "Ruhe", "Schule", "Spiel", "Braten"]
