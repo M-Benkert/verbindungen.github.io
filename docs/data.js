@@ -75,7 +75,7 @@ const words = {
 		["Unglücksbringer", "13", "schwarze Katze", "zerbrochener Spiegel", "verschüttetes Salz"],
 		["Riskante Situation", "heikle Lage", "dünnes Eis", "offenes Messer", "Spiel mit dem Feuer"],
 		["Erkennungsmerkmal der Hauptperson aus Märchen", "gläserner Schuh", "roter Umhang", "goldene Kugel", "langes Haar"],
-		["Pleonasmen", "alter Greis", "lästiges Ärgernis", "schwarzer Kohle", "natürlicher Instinkt"]
+		["Pleonasmen", "alter Greis", "lästiges Ärgernis", "schwarze Kohle", "natürlicher Instinkt"]
     ],
     "2023-12-14": [
 		["Schenken am Valentinstag", "Karte", "Praline", "Herz", "Rose"],
@@ -84,7 +84,7 @@ const words = {
 		["Zutaten für eine klassische Erdbeere Bowle", "Erdbeere", "Sekt", "Weißwein", "Minze"]
     ],
     "2023-12-15": [
-		["Umgangssprachlich für Versager", "Niete", "Pfeife", "Flache", "Null"],
+		["Umgangssprachlich für Versager", "Niete", "Pfeife", "Flasche", "Null"],
 		["Zeitlich begrenzer Abschnitt eines Wettkampfs", "Halbzeit", "Durchgang", "Lauf", "Satz"],
 		["Produkte, die man bei ihrem Markennamen nennt", "Tempo", "Labello", "Edding", "Fön"],
 		["Gebirgs-", "Pass", "Kamm", "Kette", "Zug"]
@@ -102,15 +102,15 @@ const words = {
 		["Energiegewinnung: -Kraft", "Wasser", "Wind", "Solar", "Kern"]
     ],
     "2023-12-18": [
-		["Adjektive der juristischen Fachsprache", "Volljährig", "Erwachsen", "rechtsfähig", "handlungsfähig", "geschäftsfähig", "deliktfähig", ""],
-		["Bedeutungen des Wortes Ausgehen", "Erlöschen", "Schwinden", "Enden", "Voraussetzen"],
-		["", "", "", "", ""],
-		["", "", "", "", ""]
+		["Gebäude/Komplex mit mehreren Wohngebäuden oder -einheiten", "Hochhaus", "Wohnanlage", "Studenten-wohnheim", "Feriendorf"],
+		["Ist ab 18 Jahren legal", "Kasinobesuch", "Tabakkonsum", "Pornodreh", "Vollzeitjob"],
+		["Kann auslaufen (zeitlich terminiert sein)", "Arbeitsvertrag", "Zeitschriften-abonnement", "Garantieanspruch", "Sonderangebot"],
+		["Paradoxes Wort", "Wahl-pflichtfach", "Doppelhaus-hälfte", "Selbsthilfe-gruppe", "Trauerfeier"]
     ],
     "2023-12-19": [
-		["", "", "", "", ""],
-		["", "", "", "", ""],
-		["", "", "", "", ""],
+		["Reaktion auf einen Angriff im Sport", "blocken", "ausweichen", "parieren", "kontern"],
+		["Umgang mit Konflikt", "einigen", "nachgeben", "durchsetzen", "ignorieren"],
+		["Bedeutungen des Wortes Ausgehen", "erlöschen", "schwinden", "feiern", "voraussetzen"],
 		["", "", "", "", ""]
     ],
     "2023-12-20": [
@@ -144,12 +144,9 @@ const words = {
 		["", "", "", "", ""]
     ],
     "_": [
-		["Paradoxe deutsche Wörter"],
-		["(Soziale) Bedürfnisse"],
 		["Teilen", "halbieren", "spalten", "zerlegen", "aufschlüsseln"],
-		["Hinunterschlucken", "Hinnehmen"],
-		["Reaktionen in einer unangenehmen Situation", "Hinnehmen"],
-		["Ergebnisse der Grundrechenarten", "Hinnehmen"],
+		["Reaktionen in einer unangenehmen Situation"],
+		["Ergebnisse der Grundrechenarten", "Summen", "Differenzen", "Produkte", "Quotienten"],
 		["Tarot-Karten"], // https://de.wikipedia.org/wiki/Tarot
 		["Produkte, die man bei ihrem Markennamen nennt", "Zewa", "Tempo", "Plexiglas", "Uhu", "Pritt", "Labello", "Tipp-Ex", "Tesa", "Edding", "Aspirin", "Ibuprofen", "Pampers", "Tupperware", "Fön", "Hüttenkäse"],
 		["Homophone Substantiv und Verb", "Ahnen", "Eichen", "Kapern", "Rasen"],
