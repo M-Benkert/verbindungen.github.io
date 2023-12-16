@@ -111,31 +111,31 @@ const words = {
 		["Reaktion auf einen Angriff im Sport", "blocken", "ausweichen", "parieren", "kontern"],
 		["Umgang mit Konflikt", "einigen", "nachgeben", "durchsetzen", "ignorieren"],
 		["Bedeutungen des Wortes Ausgehen", "erlöschen", "schwinden", "feiern", "voraussetzen"],
-		["", "", "", "", ""]
+		["Beim Kochen oder Backen", "hacken", "schwitzen", "reduzieren", "schlagen"]
     ],
     "2023-12-20": [
-		["", "Dart", "", "", ""],
-		["", "", "", "", ""],
-		["", "", "", "", ""],
-		["", "", "", "", ""]
+		["Ergebnis der Reproduktion eines Musters", "Ausführung", "Nachbildung", "Modell", "Prototyp"],
+		["Ergebnisse der Grundrechenarten", "Summen", "Differenzen", "Produkte", "Quotienten"],
+		["Word Tabs", "Start", "Einfügen", "Entwurf", "Referenzen"],
+		["Homophone Substantiv und Verb", "Ahnen", "Eichen", "Kapern", "Rasen"]
     ],
     "2023-12-21": [
-		["", "Blackjack", "", "", ""],
-		["", "", "", "", ""],
-		["", "", "", "", ""],
-		["", "", "", "", ""]
+		["Spiel, das mit einem Skat-Blatt gespielt werden kann", "Skat", "Arschloch", "Durak", "Krieg"],
+		["Spiel, das alle zusammenspielen", "The Game", "The Mind", "Die Crew", "Paleo"],
+		["Ausruf bei Spielen", "Bingo", "Blackjack", "Schach", "Uno"],
+		["Spiel des Jahres", "Dominion", "Kingdom Builder", "Codenames", "Azul"]
     ],
     "2023-12-22": [
 		["", "Narr", "", "", ""],
+		["Aus den Titeln von Harry Potter", "Weise", "Schrecken", "Gefangen", "Heiligtum"],
 		["", "", "", "", ""],
-		["", "", "", "", ""],
-		["", "", "", "", ""]
+		["Wörter, die häufig falsch geschrieben werden (in falsch)", "brilliant", "detalliert", "einfaltslos", "Mobilar", "Orginal", "Reperatur", "seperat", "verpöhnt"]
     ],
     "2023-12-23": [
 		["", "Primzahl", "", "", ""],
 		["", "", "", "", ""],
 		["", "", "", "", ""],
-		["", "", "", "", ""]
+		["Wort, auf das sich nichts reimt", "Pfirsich", "Musik", "Hanf", "Mensch"]
     ],
     "2023-12-24": [
 		["", "Heiligabend", "", "", ""],
@@ -143,13 +143,17 @@ const words = {
 		["", "", "", "", ""],
 		["", "", "", "", ""]
     ],
+    "2023-12-25": [
+		["Adverb/Präposition um einen weiteren Punkt der gleichen Art zu nennen", "neben", "zugleich", "zusätzlich", "ebenso"],
+		["Konjunktion zur Beschreibung der zeitlichen Abfolge", "ehe", "während", "bis", "seit"],
+		["", "", "", "", ""],
+		["", "", "", "", ""]
+    ],
     "_": [
 		["Teilen", "halbieren", "spalten", "zerlegen", "aufschlüsseln"],
 		["Reaktionen in einer unangenehmen Situation"],
-		["Ergebnisse der Grundrechenarten", "Summen", "Differenzen", "Produkte", "Quotienten"],
 		["Tarot-Karten"], // https://de.wikipedia.org/wiki/Tarot
 		["Produkte, die man bei ihrem Markennamen nennt", "Zewa", "Tempo", "Plexiglas", "Uhu", "Pritt", "Labello", "Tipp-Ex", "Tesa", "Edding", "Aspirin", "Ibuprofen", "Pampers", "Tupperware", "Fön", "Hüttenkäse"],
-		["Homophone Substantiv und Verb", "Ahnen", "Eichen", "Kapern", "Rasen"],
 		["Palindrome", "Bob", "Ebbe", "Ehe", "Elle", "Exe", "Gag", "Gig", "Hannah", "Kajak", "Kasak", "Level", "Madam", "neben", "nennen", "nun", "Otto", "Pop", "Radar", "tut", "Uhu"],
 		["Wörter, die häufig falsch geschrieben werden (in falsch)", "brilliant", "detalliert", "einfaltslos", "Mobilar", "Orginal", "Reperatur", "seperat", "verpöhnt"], // https://sternenvogelreisen.de/haeufig-falsch-geschriebene-woerter-richtig/
 		["Sonntags-", "Ruhe", "Schule", "Spiel", "Braten"]
