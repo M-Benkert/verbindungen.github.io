@@ -114,10 +114,10 @@ const words = {
 		["Beim Kochen oder Backen", "hacken", "schwitzen", "reduzieren", "schlagen"]
     ],
     "2023-12-20": [
-		["Ergebnis der Reproduktion eines Musters", "Ausführung", "Nachbildung", "Modell", "Prototyp"],
-		["Ergebnisse der Grundrechenarten", "Summen", "Differenzen", "Produkte", "Quotienten"],
-		["Word Tabs", "Start", "Einfügen", "Entwurf", "Referenzen"],
-		["Homophone Substantiv und Verb", "Ahnen", "Eichen", "Kapern", "Rasen"]
+		["Ergebnis einer Fertigung", "Produkt", "Erzeugnis", "Gut", "Modell"],
+		["Vergleich zwischen zwei Elementen", "Quotient", "Relation", "Verhältnis", "Proportion"],
+		["Abweichung", "Differenz", "Toleranz", "Entartung", "Unterschied"],
+		["Geld-", "Summe", "Gier", "Geschenk", "Verschwendung"]
     ],
     "2023-12-21": [
 		["Spiel, das mit einem Skat-Blatt gespielt werden kann", "Skat", "Arschloch", "Durak", "Krieg"],
@@ -126,36 +126,24 @@ const words = {
 		["Spiel des Jahres", "Dominion", "Kingdom Builder", "Codenames", "Azul"]
     ],
     "2023-12-22": [
-		["", "Narr", "", "", ""],
-		["Aus den Titeln von Harry Potter", "Weise", "Schrecken", "Gefangen", "Heiligtum"],
-		["", "", "", "", ""],
-		["Wörter, die häufig falsch geschrieben werden (in falsch)", "brilliant", "detalliert", "einfaltslos", "Mobilar", "Orginal", "Reperatur", "seperat", "verpöhnt"]
+		["'Arzt', der ohne schulmedizinisches Wissen praktiziert", "Medizinmann", "Schamanin", "Naturheilkundler", "Heilpraktiker"],
+		["Märchenbösewicht", "Stiefmutter", "Hexe", "Wolf", "Vater der Prinzessin"],
+		["Werwolf-Karten", "Amor", "Heiler", "Jäger", "Mädchen"],
+		["Mars", "Schokoriegel", "Roter Planet", "Kriegsgott", "Ares"]
     ],
     "2023-12-23": [
-		["", "Primzahl", "", "", ""],
-		["", "", "", "", ""],
-		["", "", "", "", ""],
-		["Wort, auf das sich nichts reimt", "Pfirsich", "Musik", "Hanf", "Mensch"]
+		["Baumart", "Kiefer", "Kastanie", "Palme", "Weide"],
+		["Codenames", "Wörter", "Agenten", "Hinweis", "Erraten"],
+		["Word Tab", "Start", "Einfügen", "Entwurf", "Referenzen"],
+		["Homophone Substantiv und Verb", "Ahnen", "Eichen", "Kapern", "Rasen"]
     ],
     "2023-12-24": [
-		["", "Heiligabend", "", "", ""],
-		["", "", "", "", ""],
-		["", "", "", "", ""],
-		["", "", "", "", ""]
-    ],
-    "2023-12-25": [
-		["Adverb/Präposition um einen weiteren Punkt der gleichen Art zu nennen", "neben", "zugleich", "zusätzlich", "ebenso"],
-		["Konjunktion zur Beschreibung der zeitlichen Abfolge", "ehe", "während", "bis", "seit"],
-		["", "", "", "", ""],
-		["", "", "", "", ""]
+		["Auf unsympathische Weise schlau", "gerissen", "listig", "durchtrieben", "verschlagen"],
+		["Aus den Titeln von Harry Potter", "Weise", "Schrecken", "Gefangen", "Heiligtum"],
+		["Wörter, die häufig falsch geschrieben werden (in falsch)", "brilliant", "detalliert", "Orginal", "verpöhnt"],
+		["-abend", "Heilig", "Feier", "Eltern", "Spiele"]
     ],
     "_": [
-		["Teilen", "halbieren", "spalten", "zerlegen", "aufschlüsseln"],
-		["Reaktionen in einer unangenehmen Situation"],
-		["Tarot-Karten"], // https://de.wikipedia.org/wiki/Tarot
-		["Produkte, die man bei ihrem Markennamen nennt", "Zewa", "Tempo", "Plexiglas", "Uhu", "Pritt", "Labello", "Tipp-Ex", "Tesa", "Edding", "Aspirin", "Ibuprofen", "Pampers", "Tupperware", "Fön", "Hüttenkäse"],
-		["Palindrome", "Bob", "Ebbe", "Ehe", "Elle", "Exe", "Gag", "Gig", "Hannah", "Kajak", "Kasak", "Level", "Madam", "neben", "nennen", "nun", "Otto", "Pop", "Radar", "tut", "Uhu"],
-		["Wörter, die häufig falsch geschrieben werden (in falsch)", "brilliant", "detalliert", "einfaltslos", "Mobilar", "Orginal", "Reperatur", "seperat", "verpöhnt"], // https://sternenvogelreisen.de/haeufig-falsch-geschriebene-woerter-richtig/
-		["Sonntags-", "Ruhe", "Schule", "Spiel", "Braten"]
-    ]
+		["Wort, auf das sich nichts reimt", "Pfirsich", "Musik", "Hanf", "Mensch"]
+	]
 }
