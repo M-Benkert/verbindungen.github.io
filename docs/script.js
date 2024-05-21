@@ -369,7 +369,7 @@ function initializeAnswerBanners() {
 
 function displayCurrentDate() {
 	const elem = document.getElementById("current-date");
-	elem.textContent = CURRENT_DATE.slice(-2);
+	elem.textContent = CURRENT_DATE;
 }
 
 function restoreGame() {

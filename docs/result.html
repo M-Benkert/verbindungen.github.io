@@ -23,6 +23,7 @@
             text-align: center;
             line-height: 40px;
             font-size: 14px;
+            cursor: pointer;
         }
 
         .succeed {
@@ -35,23 +36,46 @@
     </style>
 </head>
 <body>
-    <h1>Adventskalender Übersicht</h1>
+    <h1>Overview</h1>
 
     <div id="main"></div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const container = document.getElementById("main");
+    <script>        
+        function createDayBoxes(container, startDate, endDate) {
+            let currentDate = new Date(startDate);
+            const end = new Date(endDate);
 
-            for (let i = 1; i <= 24; i++) {
+            while (currentDate <= end) {
+                const year = currentDate.getFullYear();
+                const month = currentDate.getMonth();
+                const day = currentDate.getDate();
+
+                if (day === 1 || currentDate <= new Date(startDate)) {
+                    const monthDiv = document.createElement("div");
+                    monthDiv.className = "month";
+                    monthDiv.id = `month-${year}-${month + 1}`;
+
+                    const monthHeader = document.createElement("h2");
+                    monthHeader.textContent = currentDate.toLocaleString("default", { month: "long", year: "numeric" });
+
+                    monthDiv.appendChild(monthHeader);
+                    container.appendChild(monthDiv);
+                }
+
                 const box = document.createElement("div");
                 box.className = "box";
 
-                const formattedNumber = i.toString().padStart(2, '0');
-                const localStorageKey = `attempts_remaining_2023-12-${formattedNumber}`;
+                // Create a date string in the format YYYY-MM-DD
+                const dateString = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+
+                box.onclick = function() {
+                    window.location.href = `index.html?date=${dateString}`;
+                };
+
+                const localStorageKey = `attempts_remaining_${dateString}`;
                 const localStorageValue = localStorage.getItem(localStorageKey);
 
-                const firstNumber = i;
+                const firstNumber = day;
                 const secondNumber = localStorageValue !== null ? JSON.parse(localStorageValue) : "x";
 
                 box.innerHTML = `${firstNumber}: ${secondNumber}`;
@@ -64,8 +88,18 @@
                     }
                 }
 
-                container.appendChild(box);
+                document.getElementById(`month-${year}-${month + 1}`).appendChild(box);
+
+                currentDate.setDate(currentDate.getDate() + 1);
             }
+        }
+        
+        document.addEventListener("DOMContentLoaded", function () {
+            const container = document.getElementById("main");
+
+            const startDate = new Date(2023, 5, 12); // June 12, 2023
+            const today = new Date();
+            createDayBoxes(container, startDate, today);
         });
     </script>
 </body>
